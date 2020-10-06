@@ -106,7 +106,7 @@ judo-tests/
 Within each "test scenario" `yaml` file, individual "steps" can be defined which can run commands, run prerequisite setup commands, respond to interactions expected by the command line application, and assert the exit code and `stdout`/`stderr` output contains certain things. This is a basic example of a "test suite" with a single step named "helloWorld":
 
 ```yml
-# test-examples/simple/hello-world.yml
+# test-examples/simple-test-suite/hello-world.yml
 run:
   helloWorld:                  # a "helloWorld" test suite "step"
     command: 'echo "hi!"'
@@ -117,7 +117,7 @@ run:
     - 'bye!'
 ```
 
-Running `judo test-examples/simple/hello-world.yml` will yield this output:
+Running `judo test-examples/simple-test-suite/hello-world.yml` will yield this output:
 
 <p align="center">
   <img src="./docs/screenshot.png" />
@@ -243,3 +243,5 @@ Judo operates in the following order:
 ## Things to Know
 
 Each `when` response will only happen once, in order of their definition in the `yaml` file. So if you expect the same input multiple times, you need to write multiple responses to it.
+
+## Collaboration
